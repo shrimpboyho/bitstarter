@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /*
 Automatically grade files for the presence of specified HTML tags/attributes.
 Uses commander.js and cheerio. Teaches command line application development
@@ -24,7 +23,7 @@ References:
 var fs = require('fs');
 var program = require('commander');
 var cheerio = require('cheerio');
-var HTMLFILE_DEFAULT = "index.html";
+var HTMLFILE_DEFAULT = "/public/index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
 
 var assertFileExists = function(infile) {
@@ -66,4 +65,3 @@ if(require.main == module) {
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
-
